@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-display: optional;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-display: optional;
+}
+.header-nav-item {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #5a6b7b;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.header .container .header-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 50px 0;
+}
+.header .container .header-holder .nav-holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .container .header-holder .nav-holder .logo {
+  display: block;
+  margin-right: 49px;
+}
+.header .container .header-holder .nav-holder .logo img {
+  max-width: 100%;
+}
+.header .container .header-holder .nav-holder .header-nav-item {
+  margin-right: 58px;
+}
+.header .container .header-holder .header-signing-holder {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .container .header-holder .header-signing-holder .header-nav-item {
+  margin-right: 38px;
+}
+.header .container .header-holder .header-signing-holder .header-sign-up {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #03a9f4;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 40px;
+  border: 1px solid #03a9f4;
+  border-radius: 3px;
+}
+
+.timesheet-section {
+  background: url(../images/timesheet-app.png), linear-gradient(180deg, #eaf8ff 0%, #fff 100%);
+  background-position: right 69%;
+  background-repeat: no-repeat;
+  padding: 217px 0 150px 0;
+}
+.timesheet-section .container .timesheet-content-holder {
+  width: 49%;
+}
+.timesheet-section .container .timesheet-content-holder .reviews-holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.timesheet-section .container .timesheet-content-holder .reviews-holder .stars {
+  margin-right: 9.5px;
+}
+.timesheet-section .container .timesheet-content-holder .reviews-holder .reviews-numbers {
+  font-family: "Inter-Regular", sans-serif;
+  color: #546e7a;
+  font-size: 18px;
+  line-height: 30px;
+  font-variation-settings: "wght" 400;
+}
+.timesheet-section .container .timesheet-content-holder .timesheet-title {
+  font-family: "Inter-Bold", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #4f4f4f;
+  margin-bottom: 9px;
+  margin-top: 0;
+}
+.timesheet-section .container .timesheet-content-holder .app-description {
+  margin-bottom: 28px;
+  font-family: "Inter-Regular", sans-serif;
+  color: #5a6b7b;
+  font-size: 24px;
+  line-height: 36px;
+  font-variation-settings: "wght" 400;
+}
+.timesheet-section .container .timesheet-content-holder .get-started-button {
+  font-family: "Roboto-Regular", sans-serif;
+  font-variation-settings: "wght" 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  padding: 16px 30px;
+  background: #0288d1;
+  border-bottom: 4px solid #0277bd;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}/*# sourceMappingURL=landing-page.css.map */
