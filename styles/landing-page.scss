@@ -142,6 +142,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: unset;
+      margin-bottom: 56px;
 
       &::before {
         content: "";
@@ -166,6 +168,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 90px;
 
       .trustworthy-item {
         width: fit-content;
@@ -198,6 +201,7 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #C6D2D9;
+        padding: 20px 0;
 
         &:last-of-type {
           border-bottom: none;
@@ -208,11 +212,10 @@
           line-height: 41px;
         }
 
-        .select-holder {
+        .dropdown {
           width: 20%;
-          position: relative;
 
-          .select-field {
+          .btn {
             width: 100%;
             appearance: none;
             background-color: #EFF4F7;
@@ -228,9 +231,33 @@
             font-size: 16px;
             line-height: 19px;
             color: #333;
+            text-align: left;
 
-            &:focus-visible {
-              outline: 1px solid #03A9F4;
+            &::after {
+              display: none;
+            }
+          }
+
+          .dropdown-menu {
+            width: 100%;
+            padding: 0;
+            border: 1px solid #C6D2D9;
+            border-radius: 0 0 5px 5px;
+
+            .dropdown-item {
+              padding: 19px 30px;
+              font-family: "Roboto-Medium", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 19px;
+              color: #333;
+              text-align: left;
+
+              &:hover {
+                background-color: #EFF4F7;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -259,7 +286,7 @@
     .container-fluid {
       .container {
         .timesheet-content-holder {
-          width: 42%;
+          width: 40%;
         }
       }
     }
@@ -304,6 +331,18 @@
       }
     }
   }
+
+  .features-section {
+    .container {
+      .features-holder {
+        .features-categories {
+          .dropdown {
+            width: 25%;
+          }
+        }
+      }
+    }
+  }   
 }
 
 @media (max-width: 1100px) {
@@ -350,6 +389,8 @@
       }
 
       .trustworthy-numbers {
+        margin-bottom: 50px;
+
         .trustworthy-item {
           .trustworthy-icon {
             margin-right: 10px;
@@ -369,13 +410,17 @@
     .container {
       .features-holder {
         .features-categories {
-          .select-holder {
+          .dropdown {
             width: 30%;
+
+            .btn {
+              padding: 19px 20px;
+            }
           }
         }
       }
     }
-  }
+  } 
 }
 
 @media (max-width: 1000px) {
@@ -387,6 +432,28 @@
 }
 
 @media (max-width: 900px) {
+  .header {
+    .container {
+      .header-holder {
+        .nav-holder {
+          .logo {
+            margin-right: 35px;
+          }
+
+          a {
+            .header-nav-item {
+              margin-right: 35px;
+            }
+
+            &:nth-of-type(3) .header-nav-item {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .timesheet-section {
     .container-fluid {
       padding: 120px 0 700px 0;
@@ -424,7 +491,7 @@
 
         .nav-holder {
           width: 100%;
-          justify-content: center;
+          justify-content: space-between;
 
           a {
             .header-nav-item {
@@ -440,6 +507,7 @@
           a {
             h4 {
               text-align: center;
+              padding: 12px 40px
             }
           }
         }
@@ -469,11 +537,13 @@
       .trustworthy-numbers {
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 35px;
 
         .trustworthy-item {
           width: 32%;
           justify-content: center;
           margin-right: 1%;
+          margin-bottom: 15px;
 
           &:nth-of-type(4) {
             margin-right: 3%;
@@ -487,16 +557,17 @@
     .container {
       .features-holder {
         .features-categories {
-          .select-holder {
-            .select-field {
-              padding: 19px;
-              background-position: 91% center
+          .dropdown {
+            width: 38%;
+
+            .btn {
+              padding: 19px 16px;
             }
           }
         }
       }
     }
-  }
+  } 
 }
 
 @media (max-width: 600px) {
@@ -609,13 +680,13 @@
     .container {
       .features-holder {
         .features-categories {
-          .select-holder {
+          .dropdown {
             width: 50%;
           }
         }
       }
     }
-  }
+  } 
 }
 
 @media (max-width: 420px) {
@@ -650,4 +721,18 @@
       }
     }
   }
+
+  .features-section {
+    .container {
+      .features-holder {
+        .features-categories {
+          .dropdown {
+           .btn {
+            padding: 19px 10px;
+           }
+          }
+        }
+      }
+    }
+  } 
 }

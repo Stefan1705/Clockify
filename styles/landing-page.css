@@ -38,6 +38,8 @@ h3,
 h4 {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .header-nav-item {
@@ -186,6 +188,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: unset;
+  margin-bottom: 56px;
 }
 .trust-section .container .trust-title::before {
   content: "";
@@ -207,6 +211,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 .trust-section .container .trustworthy-numbers .trustworthy-item {
   width: fit-content;
@@ -232,6 +237,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #C6D2D9;
+  padding: 20px 0;
 }
 .features-section .container .features-holder .features-categories:last-of-type {
   border-bottom: none;
@@ -240,11 +246,10 @@ h4 {
   font-size: 35px;
   line-height: 41px;
 }
-.features-section .container .features-holder .features-categories .select-holder {
+.features-section .container .features-holder .features-categories .dropdown {
   width: 20%;
-  position: relative;
 }
-.features-section .container .features-holder .features-categories .select-holder .select-field {
+.features-section .container .features-holder .features-categories .dropdown .btn {
   width: 100%;
   appearance: none;
   background-color: #EFF4F7;
@@ -260,9 +265,30 @@ h4 {
   font-size: 16px;
   line-height: 19px;
   color: #333;
+  text-align: left;
 }
-.features-section .container .features-holder .features-categories .select-holder .select-field:focus-visible {
-  outline: 1px solid #03A9F4;
+.features-section .container .features-holder .features-categories .dropdown .btn::after {
+  display: none;
+}
+.features-section .container .features-holder .features-categories .dropdown .dropdown-menu {
+  width: 100%;
+  padding: 0;
+  border: 1px solid #C6D2D9;
+  border-radius: 0 0 5px 5px;
+}
+.features-section .container .features-holder .features-categories .dropdown .dropdown-menu .dropdown-item {
+  padding: 19px 30px;
+  font-family: "Roboto-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333;
+  text-align: left;
+}
+.features-section .container .features-holder .features-categories .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #EFF4F7;
+  cursor: pointer;
 }
 .features-section .container .features-holder .features-categories .titles-holder .features-title {
   font-size: 24px;
@@ -278,7 +304,7 @@ h4 {
 
 @media (max-width: 1536px) {
   .timesheet-section .container-fluid .container .timesheet-content-holder {
-    width: 42%;
+    width: 40%;
   }
 }
 @media (max-width: 1366px) {
@@ -304,6 +330,9 @@ h4 {
   }
   .trust-section .container .trust-title::after {
     max-width: 25%;
+  }
+  .features-section .container .features-holder .features-categories .dropdown {
+    width: 25%;
   }
 }
 @media (max-width: 1100px) {
@@ -334,6 +363,9 @@ h4 {
   .trust-section .container .trust-title::after {
     max-width: 20%;
   }
+  .trust-section .container .trustworthy-numbers {
+    margin-bottom: 50px;
+  }
   .trust-section .container .trustworthy-numbers .trustworthy-item .trustworthy-icon {
     margin-right: 10px;
     max-width: 45%;
@@ -342,8 +374,11 @@ h4 {
     font-size: 26px;
     line-height: 36px;
   }
-  .features-section .container .features-holder .features-categories .select-holder {
+  .features-section .container .features-holder .features-categories .dropdown {
     width: 30%;
+  }
+  .features-section .container .features-holder .features-categories .dropdown .btn {
+    padding: 19px 20px;
   }
 }
 @media (max-width: 1000px) {
@@ -352,6 +387,15 @@ h4 {
   }
 }
 @media (max-width: 900px) {
+  .header .container .header-holder .nav-holder .logo {
+    margin-right: 35px;
+  }
+  .header .container .header-holder .nav-holder a .header-nav-item {
+    margin-right: 35px;
+  }
+  .header .container .header-holder .nav-holder a:nth-of-type(3) .header-nav-item {
+    margin-right: 0;
+  }
   .timesheet-section .container-fluid {
     padding: 120px 0 700px 0;
   }
@@ -373,7 +417,7 @@ h4 {
   }
   .header .container .header-holder .nav-holder {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
   .header .container .header-holder .nav-holder a .header-nav-item {
     text-align: center;
@@ -384,6 +428,7 @@ h4 {
   }
   .header .container .header-holder .header-signing-holder a h4 {
     text-align: center;
+    padding: 12px 40px;
   }
   .timesheet-section .container-fluid {
     padding: 160px 0 550px 0;
@@ -398,18 +443,22 @@ h4 {
   .trust-section .container .trustworthy-numbers {
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 35px;
   }
   .trust-section .container .trustworthy-numbers .trustworthy-item {
     width: 32%;
     justify-content: center;
     margin-right: 1%;
+    margin-bottom: 15px;
   }
   .trust-section .container .trustworthy-numbers .trustworthy-item:nth-of-type(4) {
     margin-right: 3%;
   }
-  .features-section .container .features-holder .features-categories .select-holder .select-field {
-    padding: 19px;
-    background-position: 91% center;
+  .features-section .container .features-holder .features-categories .dropdown {
+    width: 38%;
+  }
+  .features-section .container .features-holder .features-categories .dropdown .btn {
+    padding: 19px 16px;
   }
 }
 @media (max-width: 600px) {
@@ -471,7 +520,7 @@ h4 {
   .trust-section .container .trustworthy-numbers .trustworthy-item:nth-of-type(4) {
     margin-right: 0;
   }
-  .features-section .container .features-holder .features-categories .select-holder {
+  .features-section .container .features-holder .features-categories .dropdown {
     width: 50%;
   }
 }
@@ -492,5 +541,8 @@ h4 {
   }
   .trust-section .container .trust-title::after {
     margin-top: 15px;
+  }
+  .features-section .container .features-holder .features-categories .dropdown .btn {
+    padding: 19px 10px;
   }
 }/*# sourceMappingURL=landing-page.css.map */
